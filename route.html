@@ -170,8 +170,20 @@ p{margin:0}
 .step-badge{display:inline-flex;justify-content:center;align-items:center;min-width:34px;padding:8px 12px;border-radius:12px;color:#fff;font-size:.85rem;font-weight:800;letter-spacing:.1em; box-shadow: 0 4px 10px rgba(0,0,0,0.15);}
 .timer-badge{display:inline-flex;align-items:center;justify-content:center;font-family:'Comfortaa',cursive;font-size:1.6rem;font-weight:700;padding:0 36px;border-radius:999px;background:rgba(255,255,255,0.4);border:2px solid #fff;color:#1E293B;backdrop-filter:blur(10px);letter-spacing:2px;}
 .timer-badge.danger{background:#ef4444;color:#fff;border-color:#fff;animation:pulseGlow 0.5s infinite alternate;box-shadow: 0 0 20px rgba(239,68,68,0.5);}
-@media (max-width: 1080px){.route-layout{grid-template-columns:1fr; flex-direction:column; overflow:auto;} body{overflow:auto;} .app{height:auto;}} 
-@media (max-width: 720px){.app{width:min(100% - 20px, 1180px);padding-top:10px}.cell{min-height:88px}.timer-badge{font-size:1.3rem;padding:0 24px;}}
+@media (max-width: 1080px){
+  body{overflow:auto;} 
+  .app{height:auto; min-height:100vh;}
+  .route-layout{grid-template-columns:1fr; overflow:visible;} 
+} 
+@media (max-width: 720px){
+  .app{width:min(100% - 20px, 1180px);padding-top:10px}
+  .timer-badge{font-size:1.3rem;padding:0 24px;}
+  .board-wrap{padding:20px 0;}
+  .board-inner{width:100%; max-width:100vw; margin:0 auto;}
+  .page-header{flex-direction:column; text-align:center; align-items:center; gap:16px;}
+  .route-actions{justify-content:center; width:100%;}
+  .axis-x{font-size:1.2rem;} .axis-y{font-size:1.2rem;} .marker{width:28px;height:28px;top:8px;left:8px;font-size:1.2rem;}
+}
   </style>
 </head>
 <body>
